@@ -5,8 +5,8 @@ script:
      - docker build -t laye/node .
      - docker images  laye/node 
 
-befor_deploy:
-      - docker login -u laye195 -p Mathematique
+before_deploy:
+      - docker login  -u laye195 -p Mathematique
 
 deploy:
    provider: script
