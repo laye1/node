@@ -10,6 +10,6 @@ before_deploy:
 
 deploy:
    provider: script
-   script: docker push laye195/nodeproject
+   script: docker push laye/node
    on:
       branch: master               
