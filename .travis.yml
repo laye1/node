@@ -2,5 +2,14 @@ sudo: required
 services:
      - docker
 script:
-     - docker build -t laye/node2 .
-     - docker images  laye/node2      
+     - docker build -t laye/node .
+     - docker images  laye/node 
+
+befor_deploy:
+      - docker login -u laye195 -p Mathematique
+
+deploy:
+   provider: script
+   script: docker push laye/node
+   on:
+      branch: master               
