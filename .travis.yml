@@ -2,7 +2,7 @@ sudo: required
 services:
      - docker
 script:
-     - docker build -t laye/node .
+     - docker build -t laye/node:tagname .
      - docker images  laye/node 
 
 before_deploy:
@@ -10,6 +10,6 @@ before_deploy:
 
 deploy:
    provider: script
-   script: docker push laye/node
+   script: docker push laye/node:tagname
    on:
       branch: master               
