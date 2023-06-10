@@ -2,14 +2,14 @@ sudo: required
 services:
      - docker
 script:
-     - docker build -t laye/node:tagname .
-     - docker images  laye/node 
+     - docker build -t laye195/node:tagname .
+     - docker images  laye195/node 
 
 before_deploy:
       - docker login  -u laye195 -p Mathematique
 
 deploy:
    provider: script
-   script: docker push laye/node:tagname
+   script: docker push laye195/node:tagname
    on:
       branch: master               
